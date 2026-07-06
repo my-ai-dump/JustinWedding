@@ -138,6 +138,7 @@ h1,h2,h3{
 }
 
 h1{
+    font-family:'Dancing Script', cursive;
 
     font-size:5rem;
 
@@ -400,6 +401,8 @@ p{
 }
 
 .hero-content h1{
+
+    font-size:90px;
 
     margin-bottom:25px;
 
@@ -1454,7 +1457,7 @@ footer p{
 
 .hero-content h1{
 
-    font-size:110px;
+    font-size:90px;
 
     line-height:1;
 
