@@ -6,6 +6,65 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     /* ===========================
+       FLOATING PETALS ANIMATION
+    =========================== */
+
+    const petalsContainer = document.querySelector(".petals-container");
+
+    if (petalsContainer) {
+
+        const PETAL_COUNT = 16;
+
+        for (let i = 0; i < PETAL_COUNT; i++) {
+
+            const petal = document.createElement("span");
+
+            petal.classList.add("petal");
+
+            const left = Math.random() * 100;
+
+            const fallDuration = 14 + Math.random() * 12;
+
+            const swayDuration = 3 + Math.random() * 3;
+
+            const delay = Math.random() * 18;
+
+            const size = 14 + Math.random() * 14;
+
+            const opacity = 0.4 + Math.random() * 0.4;
+
+            const flip = Math.random() > 0.5;
+
+            petal.style.left = `${left}%`;
+
+            petal.style.width = `${size}px`;
+
+            petal.style.height = `${size}px`;
+
+            petal.style.opacity = opacity;
+
+            petal.style.animationDuration =
+                `${fallDuration}s, ${swayDuration}s`;
+
+            petal.style.animationDelay =
+                `${delay}s, ${delay}s`;
+
+            if (flip) {
+
+                petal.style.transform = "scaleX(-1)";
+
+            }
+
+            petalsContainer.appendChild(petal);
+
+        }
+
+    }
+
+
+
+
+    /* ===========================
        PRELOADER
     =========================== */
 
