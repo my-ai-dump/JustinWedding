@@ -172,24 +172,18 @@ p{
     PRELOADER
 ==========================================================*/
 
-#preloader{
 
-    position:fixed;
 
-    inset:0;
-
-    background:white;
-
-    z-index:99999;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
+#preloader {
+    position: fixed;
+    inset: 0;
+    background: #fffaf7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    
     transition:1s;
-
 }
 
 #preloader.hide{
@@ -2323,4 +2317,28 @@ footer p{
 
     }
 
+}
+
+
+/* Rotating Flower */
+.flower {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+
+    background: url("images/ring.svg") center center no-repeat;
+    background-size: contain;
+
+    animation: rotateFlower 20s linear infinite;
+filter: drop-shadow(0 8px 18px rgba(0,0,0,0.08));
+    
+}
+
+@keyframes rotateFlower {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
